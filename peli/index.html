@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder | IMDb API System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-main">
+        <div class="container nav-box">
+            <h1 class="logo">Movie<strong>Search</strong></h1>
+            <div class="search-engine">
+                <input type="text" id="movie-input" placeholder="Buscar película (ej: Batman)...">
+                <button id="search-btn">Consultar API</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="results-area">
+            <h2 class="status-msg">Ingresa un título para comenzar</h2>
+            <div id="movies-grid" class="grid-layout">
+                </div>
+        </section>
+
+        <section id="fav-area" class="section-fav">
+            <h2>⭐ Mi Lista de Seguimiento</h2>
+            <div id="fav-grid" class="grid-layout"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Ingeniería en Sistemas | Consumo de APIs Asíncronas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
