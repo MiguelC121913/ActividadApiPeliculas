@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Finder | IMDb API System</title>
+    <title>DriveX | Secure Movie Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header-main">
-        <div class="container nav-box">
-            <h1 class="logo">Movie<strong>Search</strong></h1>
-            <div class="search-engine">
-                <input type="text" id="movie-input" placeholder="Buscar película (ej: Batman)...">
-                <button id="search-btn">Consultar API</button>
-            </div>
-        </div>
-    </header>
+    <dialog id="login-modal" open>
+        <article class="glass-card">
+            <h1>Drive<strong>X</strong></h1>
+            <p>Sistema de Gestión de Activos Digitales</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=DX-SECURE-2026" alt="QR Auth">
+            <input type="text" id="user-id" placeholder="ID de Operador (ej: Miguel)">
+            <button id="entry-btn">Validar Credenciales</button>
+        </article>
+    </dialog>
 
-    <main class="container">
-        <section id="results-area">
-            <h2 class="status-msg">Ingresa un título para comenzar</h2>
-            <div id="movies-grid" class="grid-layout">
+    <div id="app-container" style="display: none;">
+        <header class="main-nav">
+            <div class="container flex-nav">
+                <span class="logo">Drive<strong>X</strong></span>
+                <div class="search-box">
+                    <input type="text" id="movie-input" placeholder="Buscar película...">
+                    <button id="search-btn">Consultar API</button>
                 </div>
-        </section>
+                <button id="exit-btn" class="btn-alt">Cerrar Sesión</button>
+            </div>
+        </header>
 
-        <section id="fav-area" class="section-fav">
-            <h2>⭐ Mi Lista de Seguimiento</h2>
-            <div id="fav-grid" class="grid-layout"></div>
-        </section>
-    </main>
+        <main class="container">
+            <section id="results">
+                <h2>Resultados de Búsqueda</h2>
+                <div id="status-indicator">Listo para consulta...</div>
+                <div id="movies-grid" class="grid-system"></div>
+            </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 - Ingeniería en Sistemas | Consumo de APIs Asíncronas</p>
-    </footer>
+            <section id="favorites" class="fav-zone">
+                <h2>⭐ Lista de Favoritos Segura</h2>
+                <div id="fav-grid" class="grid-system"></div>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
